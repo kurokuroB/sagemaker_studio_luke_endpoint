@@ -88,7 +88,6 @@ class SentenceLukeJapanese:
         return torch.stack(all_embeddings)
     
     def check_novelty(self, sentence: str):
-        #TODO: 単一の文章に対して、knnを使用して類似度を返す関数。
         sentence_embedding=self.encode([sentence]).cpu().detach().numpy().copy()  #sentenceはリスト化して渡す。
         dists, idxs=self.knn.kneighbors(sentence_embedding, n_neighbors=10, return_distance=True)
         
