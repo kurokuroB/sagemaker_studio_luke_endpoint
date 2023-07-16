@@ -1,0 +1,2 @@
+# sagemaker_studio_luke_endpoint
+sagemaker studioとSentence-LUKEを使用して、推論用エンドポイントを作成
